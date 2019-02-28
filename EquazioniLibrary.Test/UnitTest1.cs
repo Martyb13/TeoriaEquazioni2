@@ -46,6 +46,46 @@ namespace EquazioniLibrary.Test
             bool risultato_ottenuto = EquazioniLibrary.Equazioni.isDetermined(a, b);
             Assert.AreEqual(risultato_atteso, risultato_ottenuto);
         }
+        [TestMethod]
+        public void TestIsIndeterminated1()
+        {
+            double a = 1;
+            double b = 1;
+            bool risultato_atteso = false;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isIndetermined(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsIndeterminated2()
+        {
+            double a = 0;
+            double b = 5;
+            bool risultato_atteso =false;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isIndetermined(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsIndeterminated3()
+        {
+            double a = 20;
+            double b = 1;
+            bool risultato_atteso = false;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isIndetermined(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsIndeterminated4()
+        {
+            double a = 0;
+            double b = 0;
+            bool risultato_atteso = true;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isIndetermined(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
 
     }
 }

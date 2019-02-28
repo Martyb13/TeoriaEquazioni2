@@ -18,5 +18,15 @@ namespace EquazioniLibrary
             }
             return t;
         }
+        //Equazione Indeterminata
+        static public bool isIndetermined(double a, double b)
+        {
+            bool t = false;
+            if (a == 0&& b==0)
+            {
+                t = true;
+            }
+            return t;
+        }
     }
 }
