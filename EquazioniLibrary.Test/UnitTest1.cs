@@ -86,7 +86,46 @@ namespace EquazioniLibrary.Test
             bool risultato_ottenuto = EquazioniLibrary.Equazioni.isIndetermined(a, b);
             Assert.AreEqual(risultato_atteso, risultato_ottenuto);
         }
+        [TestMethod]
+        public void TestIsInconsisted1()
+        {
+            double a = 0;
+            double b = 0;
+            bool risultato_atteso = false;
 
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isInconsisted(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsInconsisted2()
+        {
+            double a = 1;
+            double b = 0;
+            bool risultato_atteso = false;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isInconsisted(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsInconsisted3()
+        {
+            double a = 0;
+            double b = 11;
+            bool risultato_atteso = true;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isInconsisted(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsInconsisted4()
+        {
+            double a = 3;
+            double b = 4;
+            bool risultato_atteso = false;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isInconsisted(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
     }
 }
   
