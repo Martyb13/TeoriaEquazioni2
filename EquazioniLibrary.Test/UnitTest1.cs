@@ -236,6 +236,56 @@ namespace EquazioniLibrary.Test
             double risultato_ottenuto = EquazioniLibrary.Equazioni.Delta(a, b, c);
             Assert.AreEqual(risultato_atteso, risultato_ottenuto);
         }
+        [TestMethod]
+        public void EquationDegree1()
+        {
+            double a = 0;
+            double b = 3;
+            string risultato_atteso = "L'equazione è impossibile";
+
+            string risultato_ottenuto = EquazioniLibrary.Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void EquationDegree12()
+        {
+            double a = 0;
+            double b = 0;
+            string risultato_atteso = "L'equazione è indeterminata";
+
+            string risultato_ottenuto = EquazioniLibrary.Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void EquationDegree13()
+        {
+            double a = 2;
+            double b = 4;
+            string risultato_atteso = "-2";
+
+            string risultato_ottenuto = EquazioniLibrary.Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void EquationDegree14()
+        {
+            double a = 2;
+            double b = -4;
+            string risultato_atteso = "2";
+
+            string risultato_ottenuto = EquazioniLibrary.Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void EquationDegree15()
+        {
+            double a = 4;
+            double b = 0;
+            string risultato_atteso = "0";
+
+            string risultato_ottenuto = EquazioniLibrary.Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
     }
 }
   

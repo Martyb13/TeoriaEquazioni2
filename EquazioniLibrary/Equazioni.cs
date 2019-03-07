@@ -55,6 +55,24 @@ namespace EquazioniLibrary
             delta = (b * b)- 4 * a * c;
             return delta;
         }
-      
+        //Soluzione euazione di primo grado
+        static public string EquationDegree1(double a, double b)
+        {
+            string risposta = "";
+            if(isIndetermined(a,b))
+            {
+                risposta = "L'equazione è indeterminata";
+            }
+            else if(isInconsisted(a,b))
+            {
+                risposta = "L'equazione è impossibile";
+            }
+            else if(isDetermined(a,b))
+            {
+                risposta = Convert.ToString(-b / a);
+            }
+
+            return risposta;
+        }
     }
 }
