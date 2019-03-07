@@ -126,6 +126,116 @@ namespace EquazioniLibrary.Test
             bool risultato_ottenuto = EquazioniLibrary.Equazioni.isInconsisted(a, b);
             Assert.AreEqual(risultato_atteso, risultato_ottenuto);
         }
+        [TestMethod]
+        public void TestIsDegree21()
+        {
+            double a = 3;
+            double b = 4;
+            double c = 0;
+            bool risultato_atteso = true;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isDegree2(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsDegree22()
+        {
+            double a = 0;
+            double b = 4;
+            double c = 1;
+            bool risultato_atteso = false;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isDegree2(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsDegree23()
+        {
+            double a = 6;
+            double b = 4;
+            double c = 1;
+            bool risultato_atteso = true;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isDegree2(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsDegree24()
+        {
+            double a = 6;
+            double b = 0;
+            double c = 1;
+            bool risultato_atteso = true;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isDegree2(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void TestIsDegree25()
+        {
+            double a = 0;
+            double b = 0;
+            double c = 0;
+            bool risultato_atteso = false;
+
+            bool risultato_ottenuto = EquazioniLibrary.Equazioni.isDegree2(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void Delta()
+        {
+            double a = 2;
+            double b = 1;
+            double c = 3;
+            double risultato_atteso = -23;
+
+            double risultato_ottenuto = EquazioniLibrary.Equazioni.Delta(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void Delta2()
+        {
+            double a = 0;
+            double b = 1;
+            double c = 3;
+            double risultato_atteso = 1;
+
+            double risultato_ottenuto = EquazioniLibrary.Equazioni.Delta(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void Delta3()
+        {
+            double a = -1;
+            double b = 0;
+            double c = 3;
+            double risultato_atteso = 12;
+
+            double risultato_ottenuto = EquazioniLibrary.Equazioni.Delta(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void Delta4()
+        {
+            double a = -2;
+            double b = -1;
+            double c = 0;
+            double risultato_atteso = 1;
+
+            double risultato_ottenuto = EquazioniLibrary.Equazioni.Delta(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
+        [TestMethod]
+        public void Delta5()
+        {
+            double a = 0;
+            double b = 0;
+            double c = 0;
+            double risultato_atteso = 0;
+
+            double risultato_ottenuto = EquazioniLibrary.Equazioni.Delta(a, b, c);
+            Assert.AreEqual(risultato_atteso, risultato_ottenuto);
+        }
     }
 }
   
