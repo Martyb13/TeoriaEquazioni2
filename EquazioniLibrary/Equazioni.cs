@@ -9,7 +9,7 @@ namespace EquazioniLibrary
     public class Equazioni
     {
         //Equazione Determinata
-        static public bool isDetermined(double a, double b)
+        static public bool isDetermined(double a)
         {
             bool t = false;
             if (a != 0)
@@ -55,7 +55,7 @@ namespace EquazioniLibrary
             delta = (b * b)- 4 * a * c;
             return delta;
         }
-        //Soluzione euazione di primo grado
+        //Soluzione equazione di primo grado
         static public string EquationDegree1(double a, double b)
         {
             string risposta = "";
@@ -67,7 +67,7 @@ namespace EquazioniLibrary
             {
                 risposta = "L'equazione è impossibile";
             }
-            else if(isDetermined(a,b))
+            else if(isDetermined(a))
             {
                 risposta = Convert.ToString(-b / a);
             }
